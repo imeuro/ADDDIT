@@ -1,0 +1,251 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+ul,li { padding: 0; margin: 0; list-style-type: none; }
+#root, #__next { isolation: isolate; }
+
+.flex { display: flex; flex-flow: row wrap; align-items: center; justify-content: space-between; }
+.hidden { display: none!important; }
+
+.mobile { display: inline-block; }
+.desktop  { display: none; }
+@media all and (min-width: 768px) {
+	.mobile { display: none; }
+	.desktop  { display: inline-block; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+body {
+	background-color: #435165;
+}
+.container {
+    width: 1000px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.container > .title {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content {
+	width: 100%;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.content p {
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+
+
+/* LOGIN SCREEN */
+.ddd-login {
+    width: 400px;
+    max-width: 90vw;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.ddd-login h1 {
+	text-align: center;
+	color: #5b6574;
+	font-size: 24px;
+	padding: 20px 0 20px 0;
+	border-bottom: 1px solid #dee0e4;
+}
+.ddd-login form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 20px;
+}
+.ddd-usr,
+.ddd-pwd {
+    width: auto;
+    height: 50px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.ddd-login form label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background-color: #3274d6;
+	color: #ffffff;
+	border-radius: 4px 0 0 4px;
+}
+
+.ddd-login form input[type="password"], 
+.ddd-login form input[type="text"] {
+	width: 250px;
+	height: 50px;
+	border: 1px solid #dee0e4;
+	border-radius: 4px;
+	padding: 0 15px;
+}
+.ddd-login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 20px;
+    background-color: #3274d6;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.ddd-login form input[type="submit"]:hover {
+	background-color: #2868c7;
+	transition: background-color 0.2s;
+}
+
+
+
+
+
+
+
+/* DASHBOARD HOMEPAGE */
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+}
+
+
+
+
+.content ul.ddd-user-data {
+    max-width: 600px;
+    width: 100%;
+    justify-content: flex-start;
+}
+.content li {
+	padding: 5px;
+}
+
+.content li.ddd-user-item {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+	flex: 0 0 50%;
+}
+.content li.ddd-user-edit {
+    flex: 1 0 auto;
+    text-align: right;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+.content button {
+	width: auto;
+    padding: 5px 15px;
+    margin: 10px;
+    background-color: #3274d6;
+    border-radius: 6px;
+    border: 1px solid #0d47a1;
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.content button.red {
+	background-color: #d81b60;
+	border: 1px solid #880E4F;
+}
+.content button:hover {
+	background-color: #2868c7;
+	transition: background-color 0.2s;
+}
+.content button.red:hover  {
+	background-color: #e91e63;
+	border: 1px solid #0d47a1;
+}
+
+
+.ddd-user-change-password {
+    width: 100%;
+    border: 1px solid #e0e0e3;
+    border-radius: 6px;
+    background: #f3f4f7;
+    padding: 5px;
+    color: #0d47a1;
+}
+.ddd-user-change-password label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.ddd-user-change-password input {
+    width: 250px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e3;
+    padding: 5px 10px;
+    display: inline-block;
+}
