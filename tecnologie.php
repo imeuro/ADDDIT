@@ -16,7 +16,7 @@
 
 	<div class="slanted-container">
 
-		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
+		<section id="ddd-about-tecnologie" class="block-section block-section-slanted block-section-white">
 			<div class="technologies text">
 			
 				<h2>La stampa 3D: una panoramica</h2>

@@ -488,7 +488,7 @@ body {
 }
 
 .block-section.block-section-white {
-	background: rgb(var(--bianco));
+	background: rgb(var(--bianchino));
 	color: rgb(var(--blu));
 }
 .block-section.block-section-blu {

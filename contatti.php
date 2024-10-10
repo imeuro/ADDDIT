@@ -16,7 +16,7 @@
 
 	<div class="slanted-container">
 
-		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
+		<section id="ddd-about-contatti" class="block-section block-section-slanted block-section-white">
 			<div class="about-us flex text">
 				<p><strong>Adddit</strong> è il partner ideale per la <strong>produzione</strong> e la <strong>prototipazione additiva</strong> on-demand in <strong>Italia</strong>.<br>
 				Il nostro preventivatore online fornisce istantaneamente stime per una vasta gamma di tecnologie di <strong>stampa 3D</strong> professionali e materiali performanti disponibili sul territorio, grazie al nostro <strong>network</strong> di stampatori professionali Adddit che mettono a disposizione la propria capacità produttiva per soddisfare gli ordini in arrivo.</p>

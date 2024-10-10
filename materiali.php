@@ -16,7 +16,7 @@
 
 	<div class="slanted-container">
 
-		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
+		<section id="ddd-about-materiali" class="block-section block-section-slanted block-section-white">
 			<div class="materials text">
 				<h2>Materiali per la Stampa 3D: Un Mondo di Possibilità</h2>
 				<p>La stampa 3D ha rivoluzionato il modo in cui progettiamo e produciamo oggetti. Al cuore di questa tecnologia ci sono i materiali, che determinano le caratteristiche fisiche e le applicazioni finali dei prodotti finiti.</p>
