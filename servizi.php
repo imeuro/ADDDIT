@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 	<title>Servizi • ADDDIT - 3D Printing Cloud Maufacturing Platform</title>
-	<?php include('../assets/inc/doc-head.inc.php') ?>
+	<?php include('assets/inc/doc-head.inc.php') ?>
 	<meta name="description" content="Hai un modello 3D pronto? ADDDIT offre un servizio professionale di stampa 3D, trasformando i tuoi progetti digitali in oggetti fisici tangibili.">
 </head>
 <body class="ddd-single-page">
@@ -12,7 +12,7 @@
 	</section>
 
 	<header id="ddd-header" class="flex">
-		<?php include('../assets/inc/en/head-nav.inc.php') ?>
+		<?php include('assets/inc/en/head-nav.inc.php') ?>
 	</header>
 
 
@@ -64,12 +64,12 @@
 
 
 	<section id="ddd-prefooter">
-		<?php include('../assets/inc/social-prefooter.inc.php') ?>
+		<?php include('assets/inc/social-prefooter.inc.php') ?>
 	</section>
 
 
 	<footer id="ddd-footer">
-		<?php include('../assets/inc/en/footer.inc.php') ?>
+		<?php include('assets/inc/en/footer.inc.php') ?>
 	</footer>
 
 	<script async src="<?php echo $basepath .'/assets/js/ddd-carousel.min.js'; ?>"></script>
