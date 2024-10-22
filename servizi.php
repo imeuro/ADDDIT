@@ -12,7 +12,7 @@
 	</section>
 
 	<header id="ddd-header" class="flex">
-		<?php include('assets/inc/en/head-nav.inc.php') ?>
+		<?php include('assets/inc/head-nav.inc.php') ?>
 	</header>
 
 

@@ -43,7 +43,7 @@
 				<li><a href="<?php echo $basepath .'/en/materials?paragraph=others'; ?>" title="Others">...</a></li>
 			</ul>
 		</li>
-		<li class="menu-item"><a href="" title="Get a quote" class="first-lev round-btn flex">Get a Quote</a></li>
+		<li class="menu-item"><a href="<?php echo $basepath .'/quote/'; ?>" title="Get a quote" class="first-lev round-btn flex">Get a Quote</a></li>
 		<li class="menu-item lang-chooser flex">
 			<a href="<?php echo $basepath; ?>" title="Italiano" class="first-lev flex"><img src="<?php echo $basepath .'/assets/img/mini-flag-IT.svg'; ?>" alt="Italiano" title="Italiano" width="28" height="28"></a>
 			<a href="<?php echo $basepath .'/en/'; ?>" title="English" class="first-lev flex"><img src="<?php echo $basepath .'/assets/img/mini-flag-EN.svg'; ?>" alt="English" title="English" width="28" height="28"></a></li>
