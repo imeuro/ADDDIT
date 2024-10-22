@@ -10,7 +10,7 @@ $from = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $headers  = "From: " . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . "\r\n";
 $headers .= "Reply-To: " . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . "\r\n";
-$headers .= "CC: susan@example.com\r\n";
+$headers .= "CC: ".$from."\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 

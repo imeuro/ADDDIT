@@ -248,6 +248,7 @@ body {
 	}
 	#ddd-menu .menu-main li.lang-chooser {
 		padding-top: 0;
+		flex-wrap: nowrap;
 	}
 	#ddd-menu .menu-main li.lang-chooser a {
 		margin: calc(var(--spacer-unit)* .5);
