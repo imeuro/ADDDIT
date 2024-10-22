@@ -1,14 +1,14 @@
-<!doctype html>
-<html><head>
-<meta charset="utf-8">
-<title>Prova email</title>
-</head><body>
 <?php
+
+print_r($_POST);
+
+
 $to = "mauro.fioravanzi@gmail.com"; 
-$from = "hello@meuro.dev";
+$from = "quotes@adddit.eu";
 $subject = "prova invio email";
 $message = "questa è una prova";
-mail($to, $subject, $message, 'From: '.$from);
-echo 'Email inviata a '.$to;
+//mail($to, $subject, $message, 'From: '.$from);
+//echo 'Email inviata a '.$to;
+
+
 ?>
-</body></html>
