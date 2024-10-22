@@ -1,7 +1,7 @@
 <?php
-$basepath = '//'.$_SERVER['SERVER_NAME'].'/uploads';
+$basepath = 'https://'.$_SERVER['SERVER_NAME'].'/uploads';
 if ( $_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'meuro.dev' ) {
-	$basepath = '//'.$_SERVER['SERVER_NAME'].'/ADDDIT/uploads';
+	$basepath = 'https://'.$_SERVER['SERVER_NAME'].'/ADDDIT/uploads';
 }
 $target_base 		= "./uploads/";
 $target_dir_URI 	= $target_base . date('Y') . '/' . date('m') . '/';
