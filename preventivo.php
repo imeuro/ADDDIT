@@ -61,6 +61,10 @@
 							<label for="email">Email<span class="mandatory"></span></label>
 							<input type="email" id="email" name="email" required>
 						</li>
+						<li class="flex">
+							<label for="phone">Phone</label>
+							<input type="phone" id="phone" name="phone">
+						</li>
 					</ul>
 
 					<h2>Dati di preventivazione</h2>
@@ -79,7 +83,7 @@
 						</li>
 						<li class="flex">
 							<label for="città">Città<span class="mandatory"></span></label>
-							<input type="text" id="città" name="città" required>
+							<input type="text" id="citta" name="citta" required>
 						</li>
 						<li class="flex">
 							<label for="cap">CAP<span class="mandatory"></span></label>
@@ -92,6 +96,10 @@
 						<li class="flex">
 							<label for="stato">Stato<span class="mandatory"></span>:</label>
 							<input type="text" id="stato" name="stato" required>
+						</li>						
+						<li class="flex hidden">
+							<label for="other">Öther<span class="mandatory"></span>:</label>
+							<input type="text" id="other" name="other" hidden>
 						</li>
 					</ul>
 
