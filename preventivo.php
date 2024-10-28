@@ -42,6 +42,42 @@
 							<input type="number" id="quantita" name="quantita" required>
 						</li>
 						<li class="flex">
+							<label for="tecnologia">Tecnologia<span class="mandatory"></label>
+							<div class="select">
+								<select id="tecnologia" required>
+									<option value="-" selected="selected">seleziona</option>
+									<option value="MJF">MJF</option>
+									<option value="FDM">FDM</option>
+									<option value="SLS">SLS</option>
+									<option value="SLA">SLA</option>
+									<option value="DMLS">DMLS</option>
+									<option value="DMLM">DMLM</option>
+									<option value="CarbonDLS">Carbon DLS</option>
+									<option value="other">altro (specificare nelle note)</option>
+								</select>
+								<span class="focus"></span>
+							</div>
+						</li>
+						<li class="flex">
+							<label for="materiale">Materiale<span class="mandatory"></label>
+							<div class="select">
+								<select id="materiale" required>
+								<option value="-" selected="selected">seleziona</option>
+									<option value="PA12">PA12</option>
+									<option value="TPU">TPU</option>
+									<option value="PolimeriCaricati">Polimeri Caricati</option>
+									<option value="PA12GB">PA12GB</option>
+									<option value="TPA">TPA</option>
+									<option value="ABS">ABS</option>
+									<option value="Nylon">Nylon</option>
+									<option value="Inconel625">Inconel 625</option>
+									<option value="Acciaio17-4PH">Acciaio 17-4 PH</option>
+									<option value="other">altro (specificare nelle note)</option>
+								</select>
+								<span class="focus"></span>
+							</div>
+						</li>
+						<li class="flex">
 							<label for="note_cliente">Note Aggiuntive</label>
 							<textarea id="note_cliente" name="note_cliente" placeholder="Indicare eventuali preferenze circa tecnologie, materiali o altre informazioni utili in fase di preventivazione"></textarea>
 						</li>

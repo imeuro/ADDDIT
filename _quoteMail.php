@@ -26,6 +26,8 @@ $message .= '</td></tr></table>';
 $message .= '<table width="100%" bgcolor="#f5f5f5" cellpadding="15" cellspacing="5">';
 $message .= '<tr><td align="left" width="33%"><b>File inviato:</b></td><td align="left" width="66%"><a href="'.filter_var($_POST["picurl"], FILTER_SANITIZE_URL).'">Download</a></td></tr>';
 $message .= '<tr><td align="left" width="33%"><b>Quantità:</b></td><td>'.filter_var($_POST["quantita"], FILTER_SANITIZE_NUMBER_INT).'</td></tr>';
+$message .= '<tr><td align="left" width="33%"><b>Tecnologia:</b></td><td>'.filter_var($_POST["tecnologia"], FILTER_SANITIZE_NUMBER_INT).'</td></tr>';
+$message .= '<tr><td align="left" width="33%"><b>Materiale:</b></td><td>'.filter_var($_POST["materiale"], FILTER_SANITIZE_NUMBER_INT).'</td></tr>';
 $message .= '<tr><td align="left" width="33%"><b>Note Aggiuntive:</b></td><td align="left" width="66%">'.$_POST["note_cliente"].'</td></tr>';
 
 $message .= '<tr><td align="left" width="33%"><b>Nome:</b></td><td align="left" width="66%">'.strip_tags($_POST["nome"]).'</td></tr>';
