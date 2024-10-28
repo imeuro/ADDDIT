@@ -24,15 +24,9 @@
 
 	<div class="slanted-container">
 
-
 		<section id="ddd-keypoints-home" class="block-section block-section-slanted block-section-white">
 			<?php include('assets/inc/values-home.inc.php') ?>
 		</section>
-
-		<!--section id="ddd-values-home" class="block-section block-section-slanted block-section-blu">
-			<h2>Mission</h2>
-			<?php // include('assets/inc/_values-home.inc.php') ?>
-		</section-->
 
 		<section id="ddd-about-home" class="block-section block-section-slanted block-section-blu">
 			<h2>Chi Siamo</h2>
@@ -46,10 +40,9 @@
 		</section>
 
 		<section id="ddd-partners-home" class="block-section block-section-slanted block-section-white">
-			<h2>I nostri Partners</h2>
+			<h2>Main Partner</h2>
 			<?php include('assets/inc/partners-home.inc.php') ?>
 		</section>
-
 
 		<section id="ddd-network-home" class="block-section block-section-slanted block-section-blu">
 			<h2>La nostra Rete</h2>
