@@ -3,12 +3,21 @@
 // print_r($_POST);
 // echo '</pre>';
 
-if(!empty($_POST['other'])) { die('cockroach'); }
+header("X-Frame-Options: DENY");
+header("X-XSS-Protection: 1; mode=block");
+header("X-Content-Type-Options: nosniff");
+
+
+$referrer = $_SERVER['HTTP_REFERER'] ?? '';
+$allowed_domain = 'https://www.adddit.eu/preventivo';
+if( !str_starts_with($referrer, $allowed_domain) || !empty($_POST['other']) || empty($_POST['email']) ) { 
+    die('cockroach'); 
+}
 
 $to = "quotes@adddit.eu"; 
-$from = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$from = strip_tags($_POST['nome']) . " " . strip_tags($_POST['cognome']) . " <" . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . ">";
 
-$headers  = "From: " . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . "\r\n";
+$headers  = "From: " . $from . "\r\n";
 $headers .= "Reply-To: " . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . "\r\n";
 $headers .= "CC: ".$from."\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
