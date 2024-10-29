@@ -28,7 +28,7 @@ i,em { font-style: italic; }
 }
 
 /*css carousel*/
-.dddCarousel{scroll-snap-type:x mandatory;display:flex;flex-direction:row;overflow:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;max-width:100vw;transform:translateZ(0);will-change:transform}.dddCarouselControl{cursor:pointer}.dddCarousel::-webkit-scrollbar{width:0;background:0 0;display:none}.dddCarousel>.dddCarouselItem{scroll-snap-align:start;height:60vh;width:45vw;flex-shrink:0;position:relative}.dddCarousel>.dddCarouselItemActive:before{content:'Sono Attiva';position:absolute;top:50%;left:50%;width:50px;margin-left:-25px;padding:10px;background:rgba(0,0,0,.5);color:#fff;text-align:center}.dddCarouselDisabled{opacity:.3}
+.dddCarousel{scroll-snap-type:x mandatory;display:flex;flex-direction:row;overflow:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;max-width:100vw;transform:translateZ(0);will-change:transform}.dddCarouselControl{cursor:pointer}.dddCarousel::-webkit-scrollbar{width:0;background:0 0;display:none}.dddCarousel>.dddCarouselItem{scroll-snap-align:start;height:60vh;width:45vw;flex-shrink:0;position:relative}.dddCarouselDisabled{opacity:.3}
 
 
 *, html, body {
@@ -1074,6 +1074,9 @@ body {
     height: 85vh;
     padding-top: 80px;
 }
+#ddd-page-title[data-bg="about"] {
+	background-position: calc(100% - 15px) 75px;
+}
 #ddd-page-title[data-bg="servizi"] {
     background: url('../img/headers/innovative-3d-printing-stockcake.jpg') no-repeat center center rgb(var(--blu));
     background-size: cover;
@@ -1103,7 +1106,7 @@ body {
 	font-weight: 600;
 
 	height: 250px;
-	padding: 225px 0 0 0;
+	padding: 200px 0 0 0;
 }
 
 .ddd-single-page .text { 
@@ -1175,6 +1178,9 @@ z-index: -1;
         padding: calc(var(--spacer-unit)* 7) calc(var(--spacer-unit)* 2);
         text-align: center;
     }
+	#ddd-page-title[data-bg="about"] {
+		background-position: calc(100% - 55px) 75px;
+	}
     #ddd-page-title h1 {
         font-size: 64px;
         height: 300px;
@@ -1200,16 +1206,25 @@ z-index: -1;
 
 
 form#get-a-quote {
-	display: flex;
-	flex-flow: column nowrap;
-	background: #fff;
-	border-radius: 5px;
-	padding: calc(var(--spacer-unit)* 0) calc(var(--spacer-unit)* 2) calc(var(--spacer-unit)* 5) calc(var(--spacer-unit)* 2);
-	margin: calc(var(--spacer-unit)* 4) calc(var(--spacer-unit)* -2) calc(var(--spacer-unit)* -1) calc(var(--spacer-unit)* -2);
+	align-items: flex-start;
+    flex-flow: row nowrap;
+    background: #fff;
+    border-radius: 5px;
+    gap: 100px;
+    padding: 0;
+    margin: 0 calc(var(--spacer-unit)* -2);
 }
+#get-a-quote .step {
+    padding: calc(var(--spacer-unit)* 0) calc(var(--spacer-unit)* 2) calc(var(--spacer-unit)* 5) calc(var(--spacer-unit)* 2);
+    margin: 0 auto;
+    width: 100%;
+	height: auto;
+}
+
 .get-a-quote-section {
 	width: 100%;
 	max-width: 780px;
+	margin: 0 auto;
 }
 .get-a-quote-section li {
 	padding-bottom: 10px;
@@ -1250,23 +1265,23 @@ form#get-a-quote {
 }
 
 
-select {
+.get-a-quote-section select {
 	appearance: none;
 	background-color: transparent;
 	border: none;
-	padding: 10px;
+	padding: 12.5px 10px;
 	margin: 0;
 	width: 100%;
 	cursor: inherit;
 	z-index: 1;
 	outline: none;
 	color: rgba(var(--blu), 1);
-  }
-  select::-ms-expand {
+}
+.get-a-quote-section select::-ms-expand {
 	display: none;
-  }
+}
 
-.select {
+.get-a-quote-section .select {
 	flex: 1 0 auto;
 	border: 1px solid rgba(var(--blu), .5);
 	border-radius: 3px;
@@ -1279,11 +1294,11 @@ select {
 	align-items: center;
 	position: relative;
 }
-select,
-.select::after {
+.get-a-quote-section select,
+.get-a-quote-section .select::after {
 	grid-area: select;
 }
-.select:not(.select--multiple)::after {
+.get-a-quote-section .select:not(.select--multiple)::after {
 	content: "";
 	justify-self: end;
 	width: 15px;
@@ -1292,9 +1307,7 @@ select,
 	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTEzNy40IDM3NC42YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDEyOC0xMjhjOS4yLTkuMiAxMS45LTIyLjkgNi45LTM0LjlzLTE2LjYtMTkuOC0yOS42LTE5LjhMMzIgMTkyYy0xMi45IDAtMjQuNiA3LjgtMjkuNiAxOS44cy0yLjIgMjUuNyA2LjkgMzQuOWwxMjggMTI4eiIgZmlsbD0iIzE2NDM4MyIvPjwvc3ZnPg==") center center no-repeat;
 	background-size: 13px;
 }
-
-
-select:focus + .focus {
+.get-a-quote-section select:focus + .focus {
 	position: absolute;
 	top: -1px;
 	left: -1px;
@@ -1304,19 +1317,89 @@ select:focus + .focus {
 	border-radius: inherit;
 }
 
+.dddCarouselControls[data-target="#get-a-quote"] {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	margin: 0 calc(var(--spacer-unit)* -2);
+	padding: calc(var(--spacer-unit)* 1) calc(var(--spacer-unit)* 2) calc(var(--spacer-unit)* 4) calc(var(--spacer-unit)* 2);
+	background: rgba(var(--bianco), 1);
+}
+.dddCarouselControls[data-target="#get-a-quote"] a {
+	flex: 0 0 auto;
+	color: rgba(var(--bianchino), 1);
+	background: rgba(var(--blu), 1);
+	border-radius: 3px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 20px;
+	text-decoration: none;
+}
+.dddCarouselControls[data-target="#get-a-quote"] a.dddCarouselPrev {
+    padding: 10px 10px;
+}
+.dddCarouselControls[data-target="#get-a-quote"] a.dddCarouselPrev:before,
+.dddCarouselControls[data-target="#get-a-quote"] a.dddCarouselNext:after {
+	position: relative;
+    top: -1px;
+    right: -10px;
+    content: "";
+    display: inline-block;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48cGF0aCBkPSJNMTM3LjQgMzc0LjZjMTIuNSAxMi41IDMyLjggMTIuNSA0NS4zIDBsMTI4LTEyOGM5LjItOS4yIDExLjktMjIuOSA2LjktMzQuOXMtMTYuNi0xOS44LTI5LjYtMTkuOEwzMiAxOTJjLTEyLjkgMC0yNC42IDcuOC0yOS42IDE5LjhzLTIuMiAyNS43IDYuOSAzNC45bDEyOCAxMjh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+') no-repeat;
+    width: 16px;
+    height: 16px;
+	transform: rotate(-90deg);
+}
+.dddCarouselControls[data-target="#get-a-quote"] a.dddCarouselPrev:before {
+	transform: rotate(90deg);
+	right: 0px;
+	top: 4px;
+}
 
-
-
-
+.dddCarouselNavi[data-target="#get-a-quote"] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vw;
+	max-width: 300px;
+	margin: 30px auto;
+}
+.dddCarouselNavi[data-target="#get-a-quote"] .dddCarouselDot {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(var(--bianco), 1);
+	color: rgba(var(--blu), .25);
+	text-align: center;
+	font-size: 13px;
+	line-height: 40px;
+	font-weight: 500;
+}
+.dddCarouselNavi[data-target="#get-a-quote"] .dddCarouselDot.dddCarouselDotActive {
+	background: rgba(var(--blu), 1);
+	color: rgba(var(--bianco), 1);
+}
 
 
 @media (min-width: 1000px) {
+	form#get-a-quote {
+		margin: 0;
+	}
 	.get-a-quote-section.file-data > li,
 	.get-a-quote-section.file-data > li div {
 		flex-flow: row nowrap;
 	}
 	.get-a-quote-section textarea {
 		flex: 0 0 calc(100% - 300px);
+	}
+	.dddCarouselControls[data-target="#get-a-quote"] {
+		width: 100%;
+		margin: 0;
 	}
 }
 
