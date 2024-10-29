@@ -113,7 +113,6 @@
 					</div>
 
 					<div class="step dddCarouselItem" data-step="3">
-						<h2>3. Dati di preventivazione</h2>
 						<ul class="get-a-quote-section quotation-data">
 							<li class="step-title">
 								<h2>3. Dati di preventivazione</h2>
