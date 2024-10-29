@@ -19,6 +19,7 @@ $from = strip_tags($_POST['nome']) . " " . strip_tags($_POST['cognome']) . " <" 
 
 $headers  = "From: " . $from . "\r\n";
 $headers .= "Reply-To: " . filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) . "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $headers .= "CC: ".$from."\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
@@ -29,7 +30,7 @@ $message = 'questa è una prova!<br><br>';
 $message .= '<table width="100%" bgcolor="#fff"><tr><td align="center">';
 
 $message .= '<table width="100%" bgcolor="#164383" cellpadding="15" cellspacing="0"><tr><td width="230" height="26" valign="middle" align="left">';
-$message .= '<img src="https://www.adddit.eu/assets/img/ADDDIT-logo.svg" width="230" height="26" alt="ADDDIT Logo">';
+$message .= '<img src="https://www.adddit.eu/assets/img/ADDDIT-logo.png" width="230" height="26" alt="ADDDIT Logo">';
 $message .= '</td></tr></table>';
 
 $message .= '<table width="100%" bgcolor="#f5f5f5" cellpadding="15" cellspacing="5">';
