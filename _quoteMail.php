@@ -9,8 +9,16 @@ header("X-Content-Type-Options: nosniff");
 
 
 $referrer = $_SERVER['HTTP_REFERER'] ?? '';
-$allowed_domain = 'https://www.adddit.eu/preventivo';
-if( !str_starts_with($referrer, $allowed_domain) || !empty($_POST['other']) || empty($_POST['email']) ) { 
+$allowed_domains = array('https://www.adddit.eu/preventivo', 'https://meuro.dev/ADDDIT/preventivo/');
+$referrer_valid = false;
+foreach ($allowed_domains as $domain) {
+    if (str_starts_with($referrer, $domain)) {
+        $referrer_valid = true;
+        break;
+    }
+}
+
+if( !referrer_valid || !empty($_POST['other']) || empty($_POST['email']) ) { 
     die('cockroach'); 
 }
 
