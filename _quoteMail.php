@@ -1,7 +1,7 @@
 <?php
-// echo '<pre>';
-// print_r($_POST);
-// echo '</pre>';
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
 
 header("X-Frame-Options: DENY");
 header("X-XSS-Protection: 1; mode=block");
