@@ -47,8 +47,8 @@
 							<li class="flex">
 								<label for="tecnologia">Tecnologia<span class="mandatory"></label>
 								<div class="select">
-									<select id="tecnologia" required>
-										<option value="-" selected="selected">seleziona</option>
+									<select id="tecnologia" name="tecnologia" required>
+										<option value="-" disabled="" selected="">seleziona</option>
 										<option value="MJF">MJF</option>
 										<option value="FDM">FDM</option>
 										<option value="SLS">SLS</option>
@@ -64,8 +64,8 @@
 							<li class="flex">
 								<label for="materiale">Materiale<span class="mandatory"></label>
 								<div class="select">
-									<select id="materiale" required>
-									<option value="-" selected="selected">seleziona</option>
+									<select id="materiale" name="materiale" required>
+									<option value="-"  disabled="" selected="">seleziona</option>
 										<option value="PA12">PA12</option>
 										<option value="TPU">TPU</option>
 										<option value="PolimeriCaricati">Polimeri Caricati</option>
