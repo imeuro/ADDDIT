@@ -1212,7 +1212,7 @@ form#get-a-quote {
     border-radius: 5px;
     gap: 100px;
     padding: 0;
-    margin: 0 calc(var(--spacer-unit)* -2);
+    margin: calc(var(--spacer-unit)* 4) calc(var(--spacer-unit)* -2) 0 calc(var(--spacer-unit)* -2);
 }
 #get-a-quote .step {
     padding: calc(var(--spacer-unit)* 0) calc(var(--spacer-unit)* 2) calc(var(--spacer-unit)* 5) calc(var(--spacer-unit)* 2);
@@ -1388,7 +1388,7 @@ form#get-a-quote {
 
 @media (min-width: 1000px) {
 	form#get-a-quote {
-		margin: 0;
+		margin: calc(var(--spacer-unit)* 4) 0 0 0;
 	}
 	.get-a-quote-section.file-data > li,
 	.get-a-quote-section.file-data > li div {
