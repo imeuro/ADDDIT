@@ -24,21 +24,41 @@
 				<p><strong>Carica il tuo file 3D</strong> e scopri quanto è facile ottenere un oggetto unico e di alta qualità. Offriamo una vasta gamma di materiali e finiture, per soddisfare ogni esigenza.</p>
 
 				<form action="<?php echo $basepath .'/_quoteMail'; ?>" method="post" enctype="multipart/form-data" id="get-a-quote" class="flex dddCarousel"  data-passo="1" data-time="1000" data-config='{"classi": true, "eventi": true}'>
+
 					<div class="step dddCarouselItem" data-step="1">
 						<ul class="get-a-quote-section file-data">
 							<li class="step-title">
-								<h2>1. Caratteristiche del progetto</h2>
+								<h2>1. Upload del progetto</h2>
 							</li>
 							<li class="flex">
-								<label>Il tuo progetto<span class="mandatory"></span></label>
+								<label>
+									<span>Il tuo progetto<span class="mandatory"></span></span>
+									<small>
+										<br>
+										<strong>Formati supportati:</strong> obj, 3ds, stl, step, ply, gltf, glb, off, 3dm, fbx, dae, wrl, 3mf, stp, ifc, bim.
+									<br><br>
+										<strong>Dimensione file:</strong> < 50Mb
+									</small>
+								</label>
 								<div id="drop-area">
 									<p>Trascina il file in quest'area oppure utilizza il bottone per selezionare il file</p>
 									<input type="file" name="fileToUpload" id="fileToUpload" onchange="handleFiles(this.files)" class="hidden">
 									<label for="fileToUpload">Seleziona il file</label>
 									<div id="progress"></div>
-									<div id="gallery" /></div>
 									<input type="text" id="picurl" name="picurl" required class="hidden">
+									<input type="text" id="quoteID" name="quoteID" required class="hidden">
 								</div>
+							</li>
+							<li class="flex">
+								<div id="preview-area"><label>Preview Area</label></div>
+							</li>
+					</ul>
+					</div>
+
+					<div class="step dddCarouselItem" data-step="2">
+						<ul class="get-a-quote-section file-data">
+							<li class="step-title">
+								<h2>2. Caratteristiche di stampa</h2>
 							</li>
 							<li class="flex">
 								<label for="quantita">Quantità<span class="mandatory"></span></label>
@@ -87,10 +107,10 @@
 						</ul>
 					</div>
 
-					<div class="step dddCarouselItem" data-step="2">
+					<div class="step dddCarouselItem" data-step="3">
 						<ul class="get-a-quote-section customer-data">
 							<li class="step-title">
-								<h2>2. Dati del cliente</h2>
+								<h2>3. Dati del cliente</h2>
 							</li>
 
 							<li class="flex">
@@ -112,10 +132,10 @@
 						</ul>
 					</div>
 
-					<div class="step dddCarouselItem" data-step="3">
+					<div class="step dddCarouselItem" data-step="4">
 						<ul class="get-a-quote-section quotation-data">
 							<li class="step-title">
-								<h2>3. Dati di preventivazione</h2>
+								<h2>4. Dati di preventivazione</h2>
 							</li>
 							<li class="flex">
 								<label for="azienda">Azienda (opz.)</label>
@@ -182,11 +202,13 @@
 
 	<script async src="<?php echo $basepath .'/assets/js/ddd-carousel.min.js'; ?>"></script>
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+	<script type="text/javascript" src="<?php echo $basepath .'/assets/js/o3dv.min.js'; ?>"></script>
 	<!-- <script async src="<?php // echo $basepath .'/assets/js/adddit-website.js?cb=' . random_int(9, 99999); ?>"></script> -->
 	<script async src="<?php echo $basepath .'/assets/js/adddit-website.js'; ?>"></script>
 
 	<script>
 		let dropArea = document.getElementById("drop-area");
+		let previewArea = document.getElementById('preview-area');
 
 		// Prevent default drag behaviors
 		['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -231,14 +253,29 @@
 		  files.forEach(uploadFile)
 		}
 
-		function previewFile(file) {
-		  let reader = new FileReader()
-		  reader.readAsDataURL(file)
-		  reader.onloadend = function() {
-		    let img = document.createElement('img')
-		    img.src = reader.result
-		    document.getElementById('gallery').appendChild(img)
-		  }
+		function previewFile3D(file) {
+
+			// initialize the viewer with the parent element and some parameters
+			let viewer = new OV.EmbeddedViewer (previewArea, {
+				// camera : new OV.Camera (
+				// 	new OV.Coord3D (50.0, 50.0, 50.0),
+				// 	new OV.Coord3D (0.0, 0.0, 0.0),
+				// 	new OV.Coord3D (0.0, 1.0, 0.0),
+				// 	50.0
+				// ),
+				backgroundColor : new OV.RGBAColor (245, 245, 245, 255),
+				defaultColor : new OV.RGBColor (200, 200, 200),
+				edgeSettings : new OV.EdgeSettings (false, new OV.RGBColor (0, 0, 0), 1),
+			});
+
+			// load a model providing model urls
+			console.debug('file3D',file);
+			viewer.LoadModelFromUrlList(['../' + file]);
+			previewArea.getElementsByTagName('label')[0].remove();
+
+			window.addEventListener('resize', () => {
+				viewer.Resize();
+			});
 		}
 
 		function uploadFile(file, i) {
@@ -247,6 +284,7 @@
 
 			var data = new FormData()
 			data.append('fileToUpload', file);
+			data.append('action', 'upload');
 			progress.innerText = 'uploading...';
 			fetch(url, {
 				method: 'POST',
@@ -257,9 +295,10 @@
 				success => {
 					console.debug(success);
 					if (success.success == 1) {
-						progress.innerText = 'file '+success.filename+' uploaded.';
-						document.getElementById('picurl').value = success.fileURL;
-						previewFile(file);
+						progress.innerText = success.text;
+						document.getElementById('picurl').value = success.filename;
+						document.getElementById('quoteID').value = success.quoteID;
+						previewFile3D(success.tmp_filePath);
 					} else {
 						progress.innerText = 'Error: '+success.text;
 					}
@@ -273,6 +312,37 @@
 
 			
 
+		}
+
+		document.getElementById('get-a-quote').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const formquote = this;
+			moveFile();
+			setTimeout(() => {
+				formquote.submit(); // Invia il form dopo aver eseguito moveFile
+			}, 1500);
+		});
+
+		function moveFile() {
+			var url = '<?php echo $basepath ."/_quotePic.php" ?>';
+			var data = new FormData();
+			data.append('fileToMove', document.getElementById('picurl').value);
+			data.append('action', 'confirm');
+			fetch(url, {
+				method: 'POST',
+				body: data
+			}).then(
+				response => response.json()
+			).then(
+				success => {
+					console.debug(success);
+					document.getElementById('picurl').value = success.target_file_URL;
+				}
+			).catch(
+				error => {
+					console.debug(error);
+				}
+			);
 		}
 
 	</script>

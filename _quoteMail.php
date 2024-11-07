@@ -32,7 +32,7 @@ $headers .= "CC: ".$from."\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-$subject = strip_tags($_POST['nome'])." ".strip_tags($_POST['cognome'])." - Richiesta preventivo stampa";
+$subject = strip_tags($_POST['nome'])." ".strip_tags($_POST['cognome'])." - Richiesta preventivo stampa". " #".strip_tags($_POST['quoteID']);
 
 $message = 'questa è una prova!<br><br>';
 $message .= '<table width="100%" bgcolor="#fff"><tr><td align="center">';
@@ -42,6 +42,7 @@ $message .= '<img src="https://www.adddit.eu/assets/img/ADDDIT-logo.png" width="
 $message .= '</td></tr></table>';
 
 $message .= '<table width="100%" bgcolor="#f5f5f5" cellpadding="15" cellspacing="5">';
+$message .= '<tr><td align="left" width="33%"><b>ID Preventivo:</b></td><td>'.strip_tags($_POST["quoteID"]).'</td></tr>';
 $message .= '<tr><td align="left" width="33%"><b>File inviato:</b></td><td align="left" width="66%"><a href="'.filter_var($_POST["picurl"], FILTER_SANITIZE_URL).'">Download</a></td></tr>';
 $message .= '<tr><td align="left" width="33%"><b>Quantità:</b></td><td>'.filter_var($_POST["quantita"], FILTER_SANITIZE_NUMBER_INT).'</td></tr>';
 $message .= '<tr><td align="left" width="33%"><b>Tecnologia:</b></td><td>'.strip_tags($_POST["tecnologia"]).'</td></tr>';

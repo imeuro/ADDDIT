@@ -193,13 +193,13 @@ Array.from(dddcar).forEach((c) => {
 });
 
 document.addEventListener('dddCarouselSlideAttivata',(e) => {
-    console.debug(e.detail);
+    // console.debug(e.detail);
     const dddnavi = document.querySelector('.dddCarouselNavi[data-target="#'+e.detail.carouselId+'"');
     let dddcar = document.getElementById(e.detail.carouselId);
     let dddnaviDots = dddnavi.children;
 	for (var i = 0; i < dddnaviDots.length; i++) {
 		dddnaviDots[i].classList.remove('dddCarouselDotActive');
-		console.debug('#pallino: ',parseInt(e.detail.indexSlide/dddcar.dataset.passo))
+		// console.debug('#pallino: ',parseInt(e.detail.indexSlide/dddcar.dataset.passo))
 		if (i === parseInt(e.detail.indexSlide/dddcar.dataset.passo)) {
 			dddnaviDots[i].classList.add('dddCarouselDotActive');
 		}
