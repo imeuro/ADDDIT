@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 	<title>About • ADDDIT - 3D Printing Cloud Maufacturing Platform</title>
 	<?php include('../assets/inc/doc-head.inc.php') ?>
+	<meta name="description" content="Do you have a 3D model ready? ADDDIT offers a professional 3D printing service, transforming your digital projects into tangible physical objects.">
 </head>
 <body class="ddd-single-page">
 	<header id="ddd-header" class="flex">
@@ -17,8 +18,11 @@
 
 		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
 			<div class="about-us flex text">
-				<p><strong>Adddit</strong> è il partner ideale per la <strong>produzione</strong> e la <strong>prototipazione additiva</strong> on-demand in <strong>Italia</strong>.<br>
-				Il nostro preventivatore online fornisce istantaneamente stime per una vasta gamma di tecnologie di <strong>stampa 3D</strong> professionali e materiali performanti disponibili sul territorio, grazie al nostro <strong>network</strong> di stampatori professionali Adddit che mettono a disposizione la propria capacità produttiva per soddisfare gli ordini in arrivo.</p>
+				<p><strong>ADDDIT</strong> is the <strong>Cloud Manufacturing</strong> platform dedicated to the world of <strong>3D printing</strong> and the reference point for all manufacturing companies in Europe.</p>
+
+				<p><strong>ADDDIT</strong> is the first Network of 3D Printing Services that leverages the <strong>unused production capacity</strong> of its partners and allows you to always have one or more 3D printers available in a virtual ready-to-print mode!</p>
+
+				<p>Our <strong>online estimator</strong> instantly provides estimates for a wide range of professional <strong>3D printing technologies</strong> and <strong>high-performance materials</strong> available in the area, thanks to our network of professional printers who make their production capacity available to fulfill incoming orders.</p>
 			</div>
 		</section>
 

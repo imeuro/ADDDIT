@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 	<title>Materials • ADDDIT - 3D Printing Cloud Maufacturing Platform</title>
 	<?php include('../assets/inc/doc-head.inc.php') ?>
-	<meta name="description" content="Hai un modello 3D pronto? ADDDIT offre un servizio professionale di stampa 3D, trasformando i tuoi progetti digitali in oggetti fisici tangibili.">
+	<meta name="description" content="Do you have a 3D model ready? ADDDIT offers a professional 3D printing service, transforming your digital projects into tangible physical objects.">
 </head>
 <body class="ddd-single-page">
 	<header id="ddd-header" class="flex">
@@ -18,21 +18,21 @@
 
 		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
 			<div class="materials text">
-				<h2>Materiali per la Stampa 3D: Un Mondo di Possibilità</h2>
-				<p>La stampa 3D ha rivoluzionato il modo in cui progettiamo e produciamo oggetti. Al cuore di questa tecnologia ci sono i materiali, che determinano le caratteristiche fisiche e le applicazioni finali dei prodotti finiti.</p>
-				<p>I materiali più comuni utilizzati nella stampa 3D sono le plastiche, ma possono essere utilizzati anche metalli, resine e materiali compositi. Essi si presentano in una vasta gamma di tipologie, ognuna con proprietà specifiche:</p>
+				<h2>Materials for 3D Printing: A World of Possibilities</h2>
+				<p>3D printing has revolutionized the way we design and produce objects. At the heart of this technology are the materials, which determine the physical characteristics and final applications of the finished products.</p>
+				<p>The most common materials used in 3D printing are plastics, but metals, resins, and composite materials can also be used. They come in a wide range of types, each with specific properties:</p>
 
-				<h2>I principali materiali per la stampa 3D</h2>
+				<h2>The main materials for 3D printing</h2>
 				<ul class="tech-list">
-				    <li id="PA12"><strong>PA12 (Nylon 12):</strong> è un polimero termoplastico ingegneristico che si è guadagnato un posto di rilievo nel mondo della stampa 3D. Appartenente alla famiglia dei nylon, il PA12 offre una combinazione unica di proprietà meccaniche, termiche e chimiche che lo rendono ideale per una vasta gamma di applicazioni.</li>
-				    <li id="PA12GB"><strong>PA12GB:</strong> è una variante del poliammide 12 (PA12) con un'alta viscosità. La "GB" sta per "Glass Bead", indicando che il materiale è rinforzato con microsfere di vetro.</li>
-				    <li id="TPU"><strong>TPU (Poliuretano Termoplastico):</strong> è un materiale di stampa 3D molto apprezzato per la sua flessibilità e elasticità. Spesso definito come la "gomma" del mondo della stampa 3D, il TPU offre una vasta gamma di possibilità creative e applicative.</li>
-				    <li id="PolimeriCaricati"><strong>Polimeri Caricati:</strong> Un polimero caricato è un materiale composto da una matrice polimerica (come PLA, ABS, nylon) a cui sono aggiunte delle particelle, chiamate cariche. Queste cariche possono essere di natura diversa, come: Fibre (Carbonio, vetro, aramide), Minerali (Allumina, talco), Metalli (Alluminio, rame), Ceramiche (Silicio, carburo di silicio)</li>
-					<li id="TPA"><strong>TPA:</strong> Simile alla SLA, ma utilizza una sorgente luminosa UV proiettata su un'intera superficie per solidificare il resina. Offre una velocità di stampa più elevata rispetto alla SLA.</li>
-				    <li id="ABS"><strong>ABS (Acrilonitrile Butadiene Stirene):</strong> Conosciuto per la sua resistenza e durezza, è ideale per prototipi funzionali e oggetti che richiedono una certa robustezza.</li>
-				    <li id="Nylon"><strong>Nylon:</strong> è un polimero termoplastico ingegneristico ampiamente utilizzato nella stampa 3D per le sue eccellenti proprietà meccaniche e chimiche. Esistono diversi tipi di nylon, ognuno con caratteristiche specifiche.</li>
-				    <li id="Inconel625"><strong>Inconel 625:</strong> è una superlega ad alta resistenza alla corrosione e alle alte temperature, comunemente utilizzata in settori come l'aerospaziale, l'energia nucleare e l'industria chimica. Mentre la stampa 3D di Inconel 625 presenta alcune sfide, è possibile con tecnologie avanzate e materiali specializzati.</li>
-				    <li id="acciaio17-4PH"><strong>acciaio 17-4 PH:</strong> è un acciaio inossidabile martensitico temprato per precipitazione, noto per le sue eccellenti proprietà meccaniche e resistenza alla corrosione. Offre una combinazione di resistenza, durezza e resistenza alla corrosione. È ideale per applicazioni che richiedono componenti affidabili e durevoli.</li>
+				    <li id="PA12"><strong>PA12 (Nylon 12):</strong> is an engineering thermoplastic polymer that has earned a prominent place in the world of 3D printing. Belonging to the nylon family, PA12 offers a unique combination of mechanical, thermal, and chemical properties that make it ideal for a wide range of applications.</li>
+				    <li id="PA12GB"><strong>PA12GB:</strong> is a variant of polyamide 12 (PA12) with high viscosity. "GB" stands for "Glass Bead," indicating that the material is reinforced with glass beads.</li>
+				    <li id="TPU"><strong>TPU (Thermoplastic Polyurethane):</strong> is a highly appreciated 3D printing material for its flexibility and elasticity. Often referred to as the "rubber" of the 3D printing world, TPU offers a wide range of creative and application possibilities.</li>
+				    <li id="PolimeriCaricati"><strong>Filled Polymers:</strong> A filled polymer is a material composed of a polymer matrix (such as PLA, ABS, nylon) to which particles, called fillers, are added. These fillers can be of different nature, such as: Fibers (Carbon, glass, aramid), Minerals (Alumina, talc), Metals (Aluminum, copper), Ceramics (Silicon, silicon carbide)</li>
+				    <li id="TPA"><strong>TPA:</strong> Similar to SLA, but uses a UV light source projected onto an entire surface to solidify the resin. It offers a higher printing speed compared to SLA.</li>
+				    <li id="ABS"><strong>ABS (Acrylonitrile Butadiene Styrene):</strong> Known for its strength and hardness, it is ideal for functional prototypes and objects that require a certain robustness.</li>
+				    <li id="Nylon"><strong>Nylon:</strong> is an engineering thermoplastic polymer widely used in 3D printing for its excellent mechanical and chemical properties. There are different types of nylon, each with specific characteristics.</li>
+				    <li id="Inconel625"><strong>Inconel 625:</strong> is a superalloy with high resistance to corrosion and high temperatures, commonly used in sectors such as aerospace, nuclear energy, and the chemical industry. While 3D printing of Inconel 625 presents some challenges, it is possible with advanced technologies and specialized materials.</li>
+				    <li id="acciaio17-4PH"><strong>17-4 PH Stainless Steel:</strong> is a precipitation-hardened martensitic stainless steel, known for its excellent mechanical properties and corrosion resistance. It offers a combination of strength, hardness, and corrosion resistance. It is ideal for applications requiring reliable and durable components.</li>
 				</ul>
 			</div>
 		</section>

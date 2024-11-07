@@ -18,13 +18,19 @@
 		<li class="menu-item has-submenu">
 			<a href="<?php echo $basepath .'/en/technologies/'; ?>" title="Technologies" class="first-lev flex">Technologies</a>
 			<ul class="sub-menu-main">
-				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=MJF'; ?>" title="MJF">MJF</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=FDM'; ?>" title="FDM">FDM</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=SLS'; ?>" title="SLS">SLS</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=MJF'; ?>" title="MJF">MJF</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=SLA'; ?>" title="SLA">SLA</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=BinderJetting'; ?>" title="Binder Jetting">Binder Jetting</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=DMLS'; ?>" title="DMLS">DMLS</a></li>
-				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=DMLM'; ?>" title="DMLM">DMLM</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=DLP'; ?>" title="DLP">DLP</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=CarbonDLS'; ?>" title="Carbon DLS">Carbon DLS</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=Polyjet'; ?>" title="Polyjet">Polyjet</a></li>				
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=SLM'; ?>" title="SLM">SLM</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=LFFDM'; ?>" title="LFFDM">Large Format FDM</a></li>
+				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=MJP'; ?>" title="MJP">MJP</a></li>
+
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=others'; ?>" title="Others">You name it!</a></li>
 			</ul>
 		</li>
