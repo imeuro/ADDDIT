@@ -201,7 +201,7 @@
 	</footer>
 
 	<script async src="<?php echo $basepath .'/assets/js/ddd-carousel.min.js'; ?>"></script>
-	<script async src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 	<script async src="<?php echo $basepath .'/assets/js/adddit-website.js'; ?>"></script>
 	<script async src="<?php echo $basepath .'/assets/js/adddit-quoting.js'; ?>"></script>
 	<script defer type="text/javascript" src="<?php echo $basepath .'/assets/js/o3dv.min.js'; ?>"></script>
