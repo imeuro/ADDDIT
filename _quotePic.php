@@ -1,10 +1,11 @@
 <?php
 
-$basepath = 'https://'.$_SERVER['SERVER_NAME'].'/uploads';
-if ( $_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'meuro.dev' ) {
-	$basepath = 'https://'.$_SERVER['SERVER_NAME'].'/ADDDIT/uploads';
-}
+$basepath 			= 'https://'.$_SERVER['SERVER_NAME'].'/uploads';
 $target_base 		= "./uploads/";
+if ( $_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'meuro.dev' ) {
+	$basepath 		= 'https://'.$_SERVER['SERVER_NAME'].'/ADDDIT/uploads';
+	$target_base 		= "../uploads/";
+}
 $tmp_dir_URI 		= $target_base . 'temp/';
 $tmp_dir_URL 		= $basepath. '/temp/';
 
