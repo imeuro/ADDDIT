@@ -46,8 +46,6 @@ if ($_POST['action'] == 'upload') {
 
 		// Check if $reply['success'] is NOT set to 0 by an error
 		if ($reply['success'] !== 0) {
-			print_r($_FILES["fileToUpload"]["tmp_name"]);
-			print_r(  )
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $tmp_file_URI)) {
 				$reply['text'] = "The file ". htmlspecialchars( $newfilename ). " has been uploaded.";
 				$reply['tmp_fileURL'] = $tmp_file_URL;
