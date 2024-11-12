@@ -32,9 +32,9 @@
 			<h2>Chi Siamo</h2>
 
 			<div class="about-us flex text">
-				<p><strong>ADDDIT</strong> è la piattaforma di <strong>Cloud Manufacturing</strong> dedicata al mondo della <strong>stampa 3D</strong> ed il riferimento per tutte le aziende manifatturiere in Europa.</p>
+				<p><strong>ADDDIT</strong> è la piattaforma di <strong>Cloud Manufacturing</strong> leader in Europa, specializzata nel settore della <strong>stampa 3D</strong>. Rappresenta il punto di riferimento per le aziende manifatturiere che cercano soluzioni innovative per ottimizzare i processi produttivi.</p>
 
-				<p><strong>ADDDIT</strong> è il primo Network di <strong>3D Printing Services</strong> che si avvale della capacit&agrave; produttiva inutilizzata dei propri partner e ti permette di avere sempre a disposizione una o più stampanti 3D in modalità virtuale ready to Print!</p>
+				<p>Il <strong>Network ADDDIT</strong> include le tecnologie di stampa 3D più avanzate e i migliori materiali professionali disponibili a livello globale. La nostra rete di partner è composta esclusivamente da esperti del settore, certificati e altamente affidabili, pronti a soddisfare tutte le richieste produttive attraverso la piattaforma.</p>
 				<a class="read-more" href="about.php" title="read more"><img src="<?php echo $basepath .'/assets/img/arrow_right_white.svg'; ?>" width="134" height="133" alt="read more" /></a>
 			</div>
 		</section>

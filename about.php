@@ -17,11 +17,13 @@
 
 		<section id="ddd-about-home" class="block-section block-section-slanted block-section-white">
 			<div class="about-us flex text">
-				<p><strong>ADDDIT</strong> è la piattaforma di <strong>Cloud Manufacturing</strong> dedicata al mondo della <strong>stampa 3D</strong> ed il riferimento per tutte le aziende manifatturiere in Europa.</p>
+				<p><strong>ADDDIT</strong> è la piattaforma di <strong>Cloud Manufacturing</strong> leader in Europa, specializzata nel settore della <strong>stampa 3D</strong>. Rappresenta il punto di riferimento per le aziende manifatturiere che cercano soluzioni innovative per ottimizzare i processi produttivi.</p>
 
-				<p><strong>ADDDIT</strong> è il primo Network di 3d Printing Services che si avvale della <strong>capacità produttiva inutilizzata</strong> dei propri partner e ti permette di avere sempre a disposizione una o più stampanti 3d in modalità virtuale ready to Print!</p>
+				<p>Il Network <strong>ADDDIT</strong> include le tecnologie di stampa 3D più avanzate e i <strong>migliori materiali professionali</strong> disponibili a livello globale. La nostra rete di partner è composta esclusivamente da esperti del settore, certificati e altamente affidabili, pronti a soddisfare tutte le richieste produttive attraverso la piattaforma.</p>
 
-				<p>Il nostro <strong>preventivatore online</strong> fornisce istantaneamente stime per una vasta gamma di <strong>tecnologie di stampa 3D</strong> professionali e <strong>materiali performanti</strong> disponibili sul territorio, grazie al nostro <strong>network di stampatori</strong> professionali che mettono a disposizione la propria capacità produttiva per soddisfare gli ordini in arrivo.</p>
+				<p><strong>ADDDIT</strong> è il primo <strong>Network di Servizi di Stampa 3D</strong> nel mondo. Siamo un Network di Servizi di Stampa 3D che sfrutta la capacità produttiva inutilizzata dei propri partner. In questo modo, puoi sempre accedere a stampanti 3D virtuali, pronte per la produzione, <strong>ottimizzando tempi e costi</strong>.</p>
+
+				<p>Con <strong>ADDDIT</strong>, hai a disposizione soluzioni di <strong>stampa 3D on-demand</strong>, scalabili e flessibili, per affrontare qualsiasi esigenza produttiva in tempo reale.</p>
 			</div>
 		</section>
 
