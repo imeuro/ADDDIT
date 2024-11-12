@@ -3,6 +3,7 @@ var basePath = '/cfa/';
 if (ENV == 'localhost' || ENV == 'meuro.dev') {
     basePath = '/ADDDIT/';
 }
+console.debug(basePath);
 let dropArea = document.getElementById("drop-area");
 let previewArea = document.getElementById('preview-area');
 

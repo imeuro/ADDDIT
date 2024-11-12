@@ -51,7 +51,7 @@ if ($_POST['action'] == 'upload') {
 				$reply['tmp_filePath'] = $tmp_file_URI;
 			} else {
 				$reply['success'] = 0;
-				$reply['text'] = "There was a problem while moving ".$_FILES["fileToUpload"]["tmp_name"]." file to the temporary folder(".$tmp_file_URI.");
+				$reply['text'] = "There was a problem while moving ".$_FILES["fileToUpload"]["tmp_name"]." file to the temporary folder(".$tmp_file_URI.")";
 			}
 		}
 
