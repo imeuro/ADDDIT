@@ -31,7 +31,7 @@ if ($_POST['action'] == 'upload') {
 		
 		// Check if dir already exists
 		if (!file_exists($tmp_dir_URI)) {
-			mkdir($tmp_dir_URI, 0764, true);
+			mkdir($tmp_dir_URI, 0774, true);
 		}
 		// Check file size
 		if ($_FILES["fileToUpload"]["size"] > $max_filesize) {
@@ -55,7 +55,7 @@ if ($_POST['action'] == 'upload') {
 				$reply['path1']	= __DIR__;
 				$reply['path2']	= getcwd();
 				$reply['path3']	= $_SERVER['SCRIPT_FILENAME'];
-				$reply['text'] = "We are sorry, here was a problem while moving ".$_FILES["fileToUpload"]["tmp_name"]." file to the temporary folder(".$tmp_file_URI.")";
+				$reply['text'] = "We are sorry, there was a problem while handling your file for preview.";
 			}
 		}
 
