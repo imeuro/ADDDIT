@@ -4,7 +4,7 @@ $basepath 			= 'https://'.$_SERVER['SERVER_NAME'].'/uploads';
 $target_base 		= "./uploads/";
 if ( $_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'meuro.dev' ) {
 	$basepath 		= 'https://'.$_SERVER['SERVER_NAME'].'/ADDDIT/uploads';
-	$target_base 		= "../uploads/";
+	$target_base 		= "./uploads/";
 }
 $tmp_dir_URI 		= $target_base . 'temp/';
 $tmp_dir_URL 		= $basepath. '/temp/';
@@ -46,13 +46,18 @@ if ($_POST['action'] == 'upload') {
 
 		// Check if $reply['success'] is NOT set to 0 by an error
 		if ($reply['success'] !== 0) {
+			print_r($_FILES["fileToUpload"]["tmp_name"]);
+			print_r(  )
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $tmp_file_URI)) {
 				$reply['text'] = "The file ". htmlspecialchars( $newfilename ). " has been uploaded.";
 				$reply['tmp_fileURL'] = $tmp_file_URL;
 				$reply['tmp_filePath'] = $tmp_file_URI;
 			} else {
 				$reply['success'] = 0;
-				$reply['text'] = "There was a problem while moving ".$_FILES["fileToUpload"]["tmp_name"]." file to the temporary folder(".$tmp_file_URI.")";
+				$reply['path1']	= __DIR__;
+				$reply['path2']	= getcwd();
+				$reply['path3']	= $_SERVER['SCRIPT_FILENAME'];
+				$reply['text'] = "We are sorry, here was a problem while moving ".$_FILES["fileToUpload"]["tmp_name"]." file to the temporary folder(".$tmp_file_URI.")";
 			}
 		}
 
