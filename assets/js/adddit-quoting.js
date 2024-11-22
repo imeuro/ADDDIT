@@ -1,5 +1,5 @@
 var ENV = window.location.host;
-var basePath = '/cfa/';
+var basePath = '/';
 if (ENV == 'localhost' || ENV == 'meuro.dev') {
     basePath = '/ADDDIT/';
 }
@@ -140,4 +140,90 @@ function moveFile() {
             console.debug(error);
         }
     );
+}
+
+
+
+// SELECT TECNOLOGIA -> MATERIALE
+let csvimport = '';
+const csvToObject = (csv) => {
+    const rows = csv.split('\r\n');
+    const headers = rows.shift().split(',');
+    const data = {};
+    data.ita = {}; 
+    data.eng = {};
+    rows.forEach((row) => {
+        const obj = {};
+        headers.forEach((header, index) => {
+            obj[header] = row.split(',')[index];
+        });
+        //console.debug(obj);
+        //console.debug(data);
+        if (!data.ita[obj.technology]) {
+            data.ita[obj.technology] = [];
+            data.ita[obj.technology].push('seleziona un materiale compatibile')
+        }
+        if (!data.eng[obj.technology]) {
+            data.eng[obj.technology] = [];
+            data.eng[obj.technology].push('seleziona un materiale' + obj.materials_ita)
+        }
+        data.ita[obj.technology].push(obj.materials_ita);
+        data.eng[obj.technology].push(obj.materials_eng);
+    });
+    return data;
+};
+
+fetch(basePath+'assets/tech-materials.csv')
+    .then(response => response.text())
+    .then(data => {
+        const csv = data;
+        console.debug(csv);
+        // process the CSV data as needed
+        csvimport = csvToObject(csv);
+
+
+        let option = '';
+        Object.keys(csvimport.ita).forEach((key) => {
+            // console.debug(key);
+            option = document.createElement('option');
+            option.value = key;
+            option.text = key;
+            tecnologiaSelect.appendChild(option);
+        });
+
+        // console.debug('csvimport:',csvimport);
+    })
+    .catch(error => console.error('Error fetching the CSV file:', error));
+
+
+// Get the select elements
+const tecnologiaSelect = document.getElementById('tecnologia');
+const materialeSelect = document.getElementById('materiale');
+
+
+// Add an event listener to the tecnologia select element
+tecnologiaSelect.addEventListener('change', (e) => {
+    const selectedTecnologia = e.target.value;
+    // Update the materiale select element based on the selected tecnologia
+    updateMaterialeSelect(selectedTecnologia);
+});
+
+// Function to update the materiale select element
+function updateMaterialeSelect(tech) {
+    // Assuming you have an object that maps tecnologia to materiale options
+
+
+    // Clear the existing options in the materiale select element
+    materialeSelect.innerHTML = '';
+
+    // Add new options to the materiale select element based on the selected tecnologia
+    const materialeOptions = csvimport.ita[tech];
+    if (materialeOptions) {
+        materialeOptions.forEach((option) => {
+            const newOption = document.createElement('option');
+            newOption.value = option;
+            newOption.text = option;
+            materialeSelect.add(newOption);
+        });
+    }
 }
