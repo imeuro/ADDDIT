@@ -4,6 +4,8 @@ if (ENV == 'localhost' || ENV == 'meuro.dev') {
     basePath = '/ADDDIT/';
 }
 console.debug(basePath);
+let lang = document.documentElement.lang;
+console.debug(lang);
 let dropArea = document.getElementById("drop-area");
 let previewArea = document.getElementById('preview-area');
 
@@ -67,7 +69,12 @@ function previewFile3D(file) {
 
     // load a model providing model urls
     console.debug('file3D', file);
-    viewer.LoadModelFromUrlList(['../' + file]);
+    if (lang == 'it') {
+         viewer.LoadModelFromUrlList(['../' + file]); 
+    }
+    else {
+        viewer.LoadModelFromUrlList(['../../' + file]);
+    }
     previewArea.getElementsByTagName('label')[0].remove();
 
     window.addEventListener('resize', () => {
@@ -161,11 +168,11 @@ const csvToObject = (csv) => {
         //console.debug(data);
         if (!data.ita[obj.technology]) {
             data.ita[obj.technology] = [];
-            data.ita[obj.technology].push('seleziona un materiale compatibile')
+            data.ita[obj.technology].push('seleziona un materiale compatibile');
         }
         if (!data.eng[obj.technology]) {
             data.eng[obj.technology] = [];
-            data.eng[obj.technology].push('seleziona un materiale' + obj.materials_ita)
+            data.eng[obj.technology].push('select a compatible material');
         }
         data.ita[obj.technology].push(obj.materials_ita);
         data.eng[obj.technology].push(obj.materials_eng);
@@ -177,7 +184,7 @@ fetch(basePath+'assets/tech-materials.csv')
     .then(response => response.text())
     .then(data => {
         const csv = data;
-        console.debug(csv);
+        //console.debug(csv);
         // process the CSV data as needed
         csvimport = csvToObject(csv);
 
@@ -191,7 +198,7 @@ fetch(basePath+'assets/tech-materials.csv')
             tecnologiaSelect.appendChild(option);
         });
 
-        // console.debug('csvimport:',csvimport);
+        console.debug('csvimport:',csvimport);
     })
     .catch(error => console.error('Error fetching the CSV file:', error));
 
@@ -217,7 +224,10 @@ function updateMaterialeSelect(tech) {
     materialeSelect.innerHTML = '';
 
     // Add new options to the materiale select element based on the selected tecnologia
-    const materialeOptions = csvimport.ita[tech];
+    
+    let materialeOptions = (lang == 'it') ? csvimport.ita[tech] : csvimport.eng[tech];
+
+    console.debug(materialeOptions);
     if (materialeOptions) {
         materialeOptions.forEach((option) => {
             const newOption = document.createElement('option');
