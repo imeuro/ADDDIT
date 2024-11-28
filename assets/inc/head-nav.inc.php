@@ -36,7 +36,7 @@
 		<li class="menu-item has-submenu">
 			<a href="<?php echo $basepath .'/materiali/'; ?>" title="Materiali" class="first-lev flex">Materiali</a>
 			<ul class="sub-menu-main">
-				<li><a href="<?php echo $basepath .'/materiali?paragraph=PA12'; ?>" title="PA12">PA12</a></li>
+				<!--li><a href="<?php echo $basepath .'/materiali?paragraph=PA12'; ?>" title="PA12">PA12</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=TPU'; ?>" title="TPU">TPU</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=PolimeriCaricati'; ?>" title="Polimeri Caricati">Polimeri Caricati</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=PA12GB'; ?>" title="PA12GB">PA12GB</a></li>
@@ -44,7 +44,10 @@
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=ABS'; ?>" title="ABS">ABS</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=Nylon'; ?>" title="Nylon">Nylon</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=Inconel625'; ?>" title="Inconel 625">Inconel 625</a></li>
-				<li><a href="<?php echo $basepath .'/materiali?paragraph=Acciaio17-4PH'; ?>" title="Acciaio 17-4 PH">Acciaio 17-4 PH</a></li>
+				<li><a href="<?php echo $basepath .'/materiali?paragraph=Acciaio17-4PH'; ?>" title="Acciaio 17-4 PH">Acciaio 17-4 PH</a></li-->
+				<li><a href="<?php echo $basepath .'/materiali?paragraph=Polimeri'; ?>" title="Polimeri">Polimeri</a></li>
+				<li><a href="<?php echo $basepath .'/materiali?paragraph=Metalli'; ?>" title="Metalli">Metalli</a></li>
+				<li><a href="<?php echo $basepath .'/materiali?paragraph=MaterialiSpeciali'; ?>" title="Materiali Speciali">Materiali Speciali</a></li>
 				<li><a href="<?php echo $basepath .'/materiali?paragraph=other'; ?>" title="Proponi">Proponi tu!</a></li>
 			</ul>
 		</li>
