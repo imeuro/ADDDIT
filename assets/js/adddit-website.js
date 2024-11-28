@@ -216,3 +216,16 @@ document.addEventListener('dddCarouselSlideAttivata',(e) => {
 		});
 	}
 });
+
+
+const expandibles = document.querySelectorAll('.expandible-content');
+if (expandibles.length > 0) {
+	for (var i = 0; i < expandibles.length; i++) {
+		const expandible = expandibles[i];
+		const expandibleButton = expandible.firstElementChild;
+		expandible.classList.add('closed');
+		expandibleButton.addEventListener('click', () => {
+			expandible.classList.toggle('closed');
+		});
+	}
+}

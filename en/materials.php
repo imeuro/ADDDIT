@@ -23,7 +23,16 @@
 				<p>The most common materials used in 3D printing are plastics, but metals, resins, and composite materials can also be used. They come in a wide range of types, each with specific properties:</p>
 
 				<h2>The main materials for 3D printing</h2>
+
 				<ul class="tech-list">
+				    <li id="Polymers"><strong>Polymers</strong><br /> are versatile and commonly used materials in 3D printing. They are known for their strength, lightness, and ease of processing. Polymers can be used to create a wide range of objects, from functional parts to decorative objects. They are also biocompatible and can be used in medical and food applications.</li>
+				    <li id="Metalls"><strong>Metalls:</strong><br /> are robust and resistant materials commonly used in 3D printing. They are known for their high mechanical strength, thermal and electrical conductivity. Metals can be used to create complex and functional parts, such as gears, shafts and mechanical components. They are also used in aerospace, automotive and medical applications.</li>
+				    <li id="MaterialiSpeciali"><strong>Special materials</strong><br /> are a class of innovative and advanced materials used in 3D printing. They are designed to offer unique properties and high performance in specific applications. Special materials can include conductive materials, flexible materials, transparent materials and biocompatible materials. They are used in a wide range of industries, such as electronics, aerospace, medicine and scientific research.</li>
+				</ul>
+
+
+
+				<!--ul class="tech-list">
 				    <li id="PA12"><strong>PA12 (Nylon 12):</strong> is an engineering thermoplastic polymer that has earned a prominent place in the world of 3D printing. Belonging to the nylon family, PA12 offers a unique combination of mechanical, thermal, and chemical properties that make it ideal for a wide range of applications.</li>
 				    <li id="PA12GB"><strong>PA12GB:</strong> is a variant of polyamide 12 (PA12) with high viscosity. "GB" stands for "Glass Bead," indicating that the material is reinforced with glass beads.</li>
 				    <li id="TPU"><strong>TPU (Thermoplastic Polyurethane):</strong> is a highly appreciated 3D printing material for its flexibility and elasticity. Often referred to as the "rubber" of the 3D printing world, TPU offers a wide range of creative and application possibilities.</li>
@@ -33,7 +42,7 @@
 				    <li id="Nylon"><strong>Nylon:</strong> is an engineering thermoplastic polymer widely used in 3D printing for its excellent mechanical and chemical properties. There are different types of nylon, each with specific characteristics.</li>
 				    <li id="Inconel625"><strong>Inconel 625:</strong> is a superalloy with high resistance to corrosion and high temperatures, commonly used in sectors such as aerospace, nuclear energy, and the chemical industry. While 3D printing of Inconel 625 presents some challenges, it is possible with advanced technologies and specialized materials.</li>
 				    <li id="acciaio17-4PH"><strong>17-4 PH Stainless Steel:</strong> is a precipitation-hardened martensitic stainless steel, known for its excellent mechanical properties and corrosion resistance. It offers a combination of strength, hardness, and corrosion resistance. It is ideal for applications requiring reliable and durable components.</li>
-				</ul>
+				</ul-->
 			</div>
 		</section>
 
