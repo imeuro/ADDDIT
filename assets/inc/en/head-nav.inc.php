@@ -23,7 +23,6 @@
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=MJF'; ?>" title="MJF">MJF</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=SLA'; ?>" title="SLA">SLA</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=BinderJetting'; ?>" title="Binder Jetting">Binder Jetting</a></li>
-				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=DMLS'; ?>" title="DMLS">DMLS</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=DLP'; ?>" title="DLP">DLP</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=CarbonDLS'; ?>" title="Carbon DLS">Carbon DLS</a></li>
 				<li><a href="<?php echo $basepath .'/en/technologies?paragraph=Polyjet'; ?>" title="Polyjet">Polyjet</a></li>				
